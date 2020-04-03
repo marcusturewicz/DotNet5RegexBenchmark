@@ -19,12 +19,12 @@ namespace DotNet5RegexBenchmark
         }
 
         [Benchmark]
-        public void Email() => Regex.Matches(_data, @"[\w\.+-]+@[\w\.-]+\.[\w\.-]+", RegexOptions.Compiled);
+        public int Email() => Regex.Matches(_data, @"[\w\.+-]+@[\w\.-]+\.[\w\.-]+", RegexOptions.Compiled).Count;
 
         [Benchmark]
-        public void URI() => Regex.Matches(_data, @"[\w]+://[^/\s?#]+[^\s?#]+(?:\?[^\s#]*)?(?:#[^\s]*)?", RegexOptions.Compiled);
+        public int URI() => Regex.Matches(_data, @"[\w]+://[^/\s?#]+[^\s?#]+(?:\?[^\s#]*)?(?:#[^\s]*)?", RegexOptions.Compiled).Count;
 
         [Benchmark]
-        public void IP() => Regex.Matches(_data, @"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])", RegexOptions.Compiled);
+        public int IP() => Regex.Matches(_data, @"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])", RegexOptions.Compiled).Count;
     }
 }
