@@ -1,7 +1,6 @@
 # DotNet5RegexBenchmark
 
-Repository for blog post: https://dev.to/marcusturewicz/speed-up-regex-performance-with-net-5-aig
-
+Repository for blog post: https://www.marcusturewicz.com/blog/speed-up-regex-performance-with-dotnet-5
 Run with:
 
 ```
